@@ -1,16 +1,13 @@
-export default function Button({ setNumber }) {
+export default function Button({ setQuantity }) {
   return (
-    <>
-      <button
+    <div>
+      <button className="button"
         onClick={() => {
-          setNumber((prev) => prev + 1);
-        }}
-        style={{color:'red',
-          backgroundColor:'yellow'
+          setQuantity((prev) => prev + 1);
         }}
       >
         +
       </button>
-    </>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Button from "./Button";
-import Count from "./Count";
-const useQuantity = () => {
+
+export const useQuantity = () => {
   const [quantity, setQuantity] = useState(0);
   useEffect(() => {
     const fetchProduct = async () => {
@@ -17,16 +16,3 @@ const useQuantity = () => {
   }, []);
   return {quantity,setQuantity};
 };
-
-function App() {
-  const {quantity,setQuantity} = useQuantity();
-  return (
-    <div className="count-state">
-      <Count quantity={quantity} />
-
-      <Button setQuantity={setQuantity} />
-    </div>
-  );
-}
-
-export default App;
